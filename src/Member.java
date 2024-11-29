@@ -4,7 +4,7 @@ public class Member {
 
     private String name;
     private int memberID;
-    ArrayList<Book> borrowedBooks;
+    private ArrayList<Book> borrowedBooks;
 
     public Member(String name, int memberID, ArrayList<Book> borrowedBooks) {
         this.name = name;
