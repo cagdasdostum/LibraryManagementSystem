@@ -5,9 +5,7 @@ public class Book {
     private String isbn;
     private boolean available;
 
-    public Book() {
 
-    }
 
     public Book(String title, String author, String isbn, boolean available) {
         this.title = title;
@@ -20,13 +18,10 @@ public class Book {
         return available;
     }
 
-    public void setAvailable(boolean available) {
-        available = available;
+    public void setAvailable(boolean isAvailable) {
+        available = isAvailable;
     }
 
-    public String getAuthor() {
-        return author;
-    }
 
     @Override
     public String toString() {
@@ -42,15 +37,11 @@ public class Book {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getAuthor() {
+        return author;
     }
 }

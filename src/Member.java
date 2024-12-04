@@ -6,9 +6,6 @@ public class Member{
     private int memberID;
     private ArrayList<Book> borrowedBooks;
 
-    public Member() {
-
-    }
 
     public Member(String name, int memberID) {
         this.name = name;
@@ -18,6 +15,11 @@ public class Member{
     }
 
     public void BorrowBook(Book book) {
+        if (book == null) {
+            System.out.println("Hata: Geçersiz kitap (null).");
+            return;
+        }
+
         if (borrowedBooks.size() >= 5) {
             System.out.println("Aynı anda en fazla 5 kitap ödünç alabilirsiniz.");
         }
@@ -68,16 +70,7 @@ public class Member{
         return memberID;
     }
 
-    public void setMemberID(int memberID) {
-        this.memberID = memberID;
-    }
-
     public ArrayList<Book> getBorrowedBooks() {
         return borrowedBooks;
     }
-
-    public void setBorrowedBooks(ArrayList<Book> borrowedBooks) {
-        this.borrowedBooks = borrowedBooks;
-    }
-
 }
